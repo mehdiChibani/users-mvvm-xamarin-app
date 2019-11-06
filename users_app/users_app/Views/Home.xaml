@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="users_app.Views.Home"
+             Title="Acceuil"
+             >
+    <ContentPage.Content>
+        <Grid>
+        <StackLayout BackgroundColor="White">
+            <ListView
+            RowHeight="90"
+            SeparatorVisibility="Default"
+            BackgroundColor="White"
+            ItemsSource="{Binding PhotoList}"
+            >
+                <ListView.ItemTemplate>
+                    <DataTemplate >
+                        <ViewCell>
+                            <!-- Main design for our menu items -->
+                                <StackLayout Padding="20,10,0,10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" BackgroundColor="White"
+                                         >
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="{Binding ThumbnailUrl}" HeightRequest="70" WidthRequest="70"/>
+                                        <StackLayout Orientation="Vertical" Margin="0,7,0,0">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Label Text="{Binding Title}" FontSize="17"></Label>
+                                            </StackLayout>
+                                            <Label Text="{Binding Url}" FontSize="13"></Label>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+                <StackLayout Orientation="Horizontal"  Margin="150,0,0,10">
+                    <Image Source="addfirst.png"></Image>
+                    <Button Text="Add A Post :" Clicked="Button_Clicked"></Button>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

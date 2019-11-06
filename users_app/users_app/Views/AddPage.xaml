@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="users_app.Views.AddPage">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="xamarin.png" Opacity="0.4"
+               HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"
+               ></Image>
+            <Frame CornerRadius="10"  
+       Margin="12,60,12,100"
+       Padding="0" Opacity="0.8">
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="12,10,0,0">
+                        <Label Text="Id :" FontSize="18"  Margin="12,10,5,0"></Label>
+                        <Entry Placeholder="110" PlaceholderColor="#005c99" HorizontalOptions="FillAndExpand" Text="{Binding Id,Mode=TwoWay}" />
+
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="5,10,0,0">
+                        <Label Text="Title :" FontSize="18"  Margin="12,10,5,0"></Label>
+                        <Entry Placeholder="Titre" PlaceholderColor="#005c99" HorizontalOptions="FillAndExpand" Text="{Binding Titre,Mode=TwoWay}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="5,10,0,0">
+                        <Label Text="Body :" FontSize="18"  Margin="12,10,5,0"></Label>
+                        <Editor Placeholder="Contenu" AutoSize="TextChanges" PlaceholderColor="#005c99" HorizontalOptions="FillAndExpand" Text="{Binding Contenu,Mode=TwoWay}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="5,10,0,0">
+                        <Label Text="User :" FontSize="18"  Margin="12,10,5,0"></Label>
+                        <Picker Title="La casa De papel Users" 
+                                HorizontalOptions="FillAndExpand"
+                            TextColor="Black"
+                            ItemsSource="{Binding UsersList}"
+                            ItemDisplayBinding="{Binding Name}"
+                            SelectedItem="{Binding User,Mode=TwoWay}"
+                             
+                        />
+                    </StackLayout>
+                    
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Margin="0,140,10,0">
+                        <Image Source="addfirst.png"></Image>
+                        <Button Text="Enregistrer" BackgroundColor="#005c99" 
+                              Command="{Binding Enregistrer , Mode=TwoWay}"
+                              IsEnabled="{Binding En , Mode=TwoWay}"   
+                                >
+
+                        </Button>
+                    </StackLayout>
+                    
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="users_app.Views.Profil"
+             Title="Mon Compte"
+             >
+    <Grid>
+        <StackLayout>
+            <Image Source="blue.jpg" Aspect="AspectFill"></Image>
+        </StackLayout>
+        <StackLayout VerticalOptions="StartAndExpand" Margin="150,40,150,0">
+            <Frame HasShadow="False" WidthRequest="70" HeightRequest="70" CornerRadius="35">
+            <Image Source="https://randomuser.me/api/portraits/men/73.jpg" HeightRequest="100" WidthRequest="100"></Image>
+                
+                
+            </Frame>
+            
+        </StackLayout>
+        <StackLayout  Margin="130,160,0,0">
+            <Label Text="Mehdi chibani" FontSize="25" TextColor="White" ></Label>
+        </StackLayout>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="5,240,0,0">
+                <Image Source="mappin.png"></Image>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Adress :" FontSize="20"></Label>
+                    <Label Text="Betana Salé" FontSize="20"></Label>
+                </StackLayout>
+            </StackLayout>
+            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" WidthRequest="1" Color=" #1a1a1a"/>
+            <StackLayout Orientation="Horizontal" Margin="5,7,0,0">
+                <Image Source="senior.png"></Image>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Age :" FontSize="20"></Label>
+                    <Label Text="22 Ans" FontSize="20"></Label>
+                </StackLayout>
+            </StackLayout>
+            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="1" WidthRequest="1" Color=" #1a1a1a"/>
+            <StackLayout Margin="5,7,0,0">
+                <Label Text="Description :" FontSize="20"></Label>
+                <Label  Margin="15,0,0,0" Text="Un Devloppeur Mobile Passionné par les Nouvelles Téchnologies" FontSize="16"> </Label>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>
